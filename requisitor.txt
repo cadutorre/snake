@@ -1,0 +1,8 @@
+1-Reajustar o canvas
+2-Fazer o "unsubscribe" os observers no disconect
+3-Sistema de pontuação
+4-Som a cada ponto e som a cada 100 pontos
+5-Teletrasnpoty
+6-Extrair funções anonimas do network
+7-Filtrar os commando enviado ao backend
+8-Gitpod com versão fixa do Node.js

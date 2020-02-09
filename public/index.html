@@ -63,12 +63,12 @@
       });
 
       socket.on("add-fruit", command => {
-        console.log(`Receiving ${command.type} -> ${command.playerId}`);
+        console.log(`Receiving ${command.type} -> ${command.fruitId}`);
         game.addFruit(command);
       });
 
       socket.on("remove-fruit", command => {
-        console.log(`Receiving ${command.type} -> ${command.playerId}`);
+        console.log(`Receiving ${command.type} -> ${command.fruitId}`);
         game.removeFruit(command);
       });
     </script>
