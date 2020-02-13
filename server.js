@@ -22,9 +22,7 @@ console.log(game.state);
 sockets.on("connection", socket => {
   const playerId = socket.id;
   console.log(`> Player connected: ${playerId}`);
-
   game.addPlayer({ playerId });
-
   socket.emit("setup", game.state);
 
   socket.on("disconnect", () => {

@@ -24,7 +24,6 @@
 
       const game = createGame();
       const keyboardListener = createKeyboardListener(document);
-
       const socket = io();
 
       socket.on("connect", () => {
@@ -42,6 +41,11 @@
         keyboardListener.subscribe(command => {
           socket.emit(command.type, command);
         });
+      });
+
+      socket.on("disconnect", () => {
+        console.log(`> Disconnecting player`);
+        keyboardListener.unsubscribeAll();
       });
 
       socket.on("add-player", command => {
