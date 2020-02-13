@@ -3,8 +3,8 @@ export default function createGame() {
     players: {},
     fruits: {},
     screen: {
-      width: 10,
-      height: 10
+      width: 20,
+      height: 20
     }
   };
 
@@ -12,7 +12,6 @@ export default function createGame() {
 
   function start() {
     const frequence = 2000;
-
     setInterval(addFruit, frequence);
   }
 
@@ -28,6 +27,11 @@ export default function createGame() {
 
   function setState(newState) {
     Object.assign(state, newState);
+  }
+
+  function increseWidthScreen(command) {
+    const increseWidth = command.size;
+    state.screen.width = state.screen.width + increseWidth;
   }
 
   function addPlayer(command) {
@@ -161,6 +165,7 @@ export default function createGame() {
     state,
     setState,
     subscribe,
-    start
+    start,
+    increseWidthScreen
   };
 }
